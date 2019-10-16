@@ -1,0 +1,47 @@
+<% include ./partials/header %>
+
+<div class="select-form">
+<h1>SELECT DATE</h1>
+
+<form class="" action="/control/clock/search/<%=result[0].employee_id%>" method="get">
+  <select class="" name="clock_date">
+    <%let list =[]%>
+    <%result.forEach(item=>{%>
+      <%if(!(list.includes(item.date))&& item.date!==null){%>
+        <%list.push(item.date)%>
+      <%}%>
+    <%})%>
+    <%list.forEach(date=>{%>
+      <%console.log(date)%>
+      <option value="<%=date%>"><%=date%></option>
+    <%})%>
+  </select><br><br>
+  <button type="submit" name="button">Search</button>
+
+</form>
+
+
+
+
+
+<h1><%=employeename.name%> Time CARD</h1>
+<hr>
+<%result.forEach(item=>{%>
+  <h1><%=item.clockin_date%></h1>
+
+  <h5>Date</h5>
+  <h5><%=item.date%></h5>
+  <%if(item.clockin_time){%>
+    <h5>Clock in Time :</h5>
+    <h5><%=item.clockin_time.slice(0,5)%></h5><hr>
+  <%}else{%>
+    <h5>Clock out Time :</h5>
+    <h5><%=item.clockout_time.slice(0,5)%></h5><hr>
+    <h5>Working time</h5>
+    <h5><%=item.workingtime%> Hours</h5><hr>
+  <%}%>
+<%})%>
+
+
+
+<% include ./partials/footer %>

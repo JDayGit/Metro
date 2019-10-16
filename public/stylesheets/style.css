@@ -1,0 +1,620 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* Header */
+
+
+html,
+body {
+    /* background-color: #fff; */
+    /* color: #555; */
+    font-family: 'Lato', 'Arial', sans-serif;
+    /* font-weight: 300;
+    font-size: 20px; */
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.hamburger {
+  /* background-color:black; */
+
+}
+
+.hamLinks{
+  background-color: white;
+  border-radius: 5px;
+  z-index: 500000000;
+}
+
+.metroLogo {
+  height: 4vh;
+  margin-right: 2em;
+}
+
+.topNav {
+  box-shadow: 2px 2px 30px grey;
+}
+
+.address {
+  padding-right: 5%;
+}
+
+.navbar {
+  box-shadow: 0px 0px 10px grey;
+  height: 10vh;
+}
+
+/* google maps */
+
+.googleMaps {
+  height: 6vh;
+  width: 10vw;
+}
+
+/* Upcoming projects bottom banner */
+
+.upcoming {
+  padding-top: 2%;
+  text-align: center;
+  height: 17vh;
+  background-color: #efefef;
+  padding-bottom:2vh;
+}
+
+.contactUs {
+  width: 7vw;
+  height: 4vh;
+  border-radius: 5px;
+  background-color: #C8752F;
+  color: ghostwhite;
+  box-shadow: 2px 2px 20px grey;
+  font-size: 1vw;
+}
+
+.contactUs:hover {
+  width: 8vw;
+  height: 5vh;
+  border-radius: 5px;
+  background-color: #C8752F;
+  color: ghostwhite;
+  box-shadow: 2px 2px 20px grey;
+}
+
+.upcoming h2 {
+  font-style: italic;
+  color: #480500;
+}
+
+.deleteBtn {
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Google Maps */
+
+#map {
+  width: 100%;
+  height: 350px;
+  border-top:2px solid gray;
+  border-bottom: 2px solid gray;
+}
+
+/* Add projects page */
+
+.caption {
+  background-color: white;
+  opacity: .8;
+  border-radius: 5px;
+}
+
+.description {
+  color: #2e242c;
+}
+
+.add {
+  text-align: center;
+  height: 80vh;
+  padding-top: 5%;
+  background-image: url("https://images.pexels.com/photos/168442/pexels-photo-168442.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.addForm input {
+  height: 5vh;
+  width: 28vw;
+  margin-top: 5%;
+  border-radius: 3px;
+  opacity: .9;
+}
+
+.addForm textarea {
+  margin-top: 5%;
+  width: 28vw;
+  border-radius: 3px;
+  opacity: .9;
+}
+
+.formBtn {
+  font-size: 1.5em;
+}
+
+.header {
+  color: ghostwhite;
+  opacity: .8;
+}
+
+/* Contact PAGE  */
+
+.contactPage {
+  margin-top: 2%;
+  margin-bottom: 4%;
+  text-align: center;
+}
+
+.contactForm input {
+  width: 25vw;
+  margin-bottom: .5%;
+  border-radius: 5px;
+  border-radius: 5px;
+  text-align:center;
+  border-color:#efefef;
+}
+
+.contactForm textarea {
+  width: 25vw;
+  border-radius: 5px;
+  text-align: center;
+  padding-top:5px;
+  border-color:#efefef;
+}
+
+.contactForm  {
+  border-radius: 5px;
+  text-align: center;
+  padding-bottom: 2%ß
+}
+
+#contact-btn {
+  background-color: #A8A8A8;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 5%;
+  border:2px solid #C8752F;
+}
+
+#contact-btn:hover{
+  background-color: #C8752F;
+  font-size:14px;
+}
+
+.contact-form{
+  border: 3px solid #C8752F;
+  padding:25px;
+  border-radius:10px;
+  background-color:#efefef;
+}
+
+#contact-input{
+  border: 2px solid #C8752F;
+  font-size:12px;
+  font-weight:900;
+}
+
+/* Inbox page  */
+
+.inbox {
+  border: 1px solid grey;
+  padding: 25px;
+  font-size: 15px;
+  text-align: center;
+  background-color;
+}
+
+.inboxBtns {
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: ghostwhite;
+  background-color: grey;
+}
+
+/* LOGIN Modal */
+
+.myModal {
+  color: white;
+  background-color: #404040;
+  opacity: 0.8;
+  margin-top: 30%;
+  text-align: center;
+  padding-top: 10%;
+  border-radius: 5%;
+}
+
+.myModal input {
+  border-radius: 5px;
+  margin-bottom: 1vh;
+  align-items: center;
+  font-size:15px;
+  text-align: center;
+  padding:5px;
+}
+
+.modalHeader {
+  color: white;
+  text-align: center;
+}
+
+#modal-login-btn {
+  background-color: #0070FF;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 5%;
+}
+
+.closeBtn {
+  border-radius: 5px;
+  background-color: #A8A8A8;
+}
+
+.psw {
+  color: ghostwhite;
+  margin-top: 2%;
+}
+
+.modal {
+  text-align: center;
+}
+
+.adminModal {
+  color: white;
+  background-color: black;
+  opacity: 1.0;
+  margin-top: 30%;
+  text-align: center;
+  padding-top: 10%;
+  border-radius: 5%;
+}
+
+.adminModal input {
+  border-radius: 5px;
+  margin-bottom: 1vh;
+  align-items: center;
+  font-size:15px;
+  text-align: center;
+  padding:5px;
+}
+
+#modal-login-btn {
+  background-color: #0070FF;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 5%;
+}
+
+/* INBOX.EJS */
+
+#inbox-container {
+  text-align: center;
+}
+
+form {
+  display: inline-block;
+}
+
+#inbox-btn {
+  height: 45px;
+  width: 100px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* PROJECTS PAGE */
+
+#background-carousel {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.projectCaption {
+  background-color: ghostwhite;
+  opacity: .9;
+  color: black;
+  border-radius: 5px;
+  font-style: italic;
+}
+
+.carousel, .carousel-inner {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.item {
+  width: 100%;
+  height: 80%;
+  background-position: center center;
+  background-size: cover;
+  z-index: 0;
+}
+
+h5 {
+  display: inline-block;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.index-btn-box {
+  display: inline-block;
+}
+
+#currentandrecent{
+  text-align:center;
+  padding-top:10px;
+  padding-bottom:10px;
+  background-color: white;
+  margin-top:5px;
+}
+
+/* Main page */
+
+.indexIMG {
+  border-radius: 20%;
+  box-shadow: 2px 2px 20px grey;
+}
+
+.responsive {
+  width: 70%;
+  height: 100%;
+}
+.red{
+  background-color: red;
+}
+
+.responsiveTxt {
+  font-size: 1vw;
+}
+
+.mainContainer {
+  text-align: center;
+}
+
+.headline {
+  text-align: center;
+  color: white;
+  padding-top: 6%;
+  font-size: 2.5vw;
+  opacity: .9;
+  width: 40em;
+}
+
+.parallax {
+  /* The image used */
+  /* background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/cropped_road.jpg); */
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url(/images/cropped_road.jpg); */
+  background-image: url(/images/cropped_road.jpg);
+  height: 30vh;
+  opacity:
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 2px 2px 20px grey;
+}
+
+.mainList {
+  font-size: 1vw;
+}
+
+.arrow {
+  height: 100px;
+}
+
+.about {
+  height: 27em;
+  font-style: 1vw;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+/* Leadership Page */
+
+.profileContainer {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.profileRows {
+  margin-top: 5%;
+  ;
+}
+
+.profile {
+  height: 30vh;
+  width: auto;
+  border-radius: 3px;
+  box-shadow: 2px 2px 30px grey;
+}
+
+/* Controls Page */
+
+.controlCont {
+  margin-bottom: 7%;
+  margin-top: 5%;
+}
+
+.newProjectBtn {
+  height: 4vh;
+  width: 8vw;
+  border-radius: 10px;
+}
+
+.newProjectBtn:hover {
+  height: 5vh;
+  width: 9vw;
+  border-radius: 10px;
+  background-color: #9D9B97;
+}
+
+/* Equipment Page */
+
+.equipmentContainer {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.equipIMG {
+  height: 30vh;
+  width: auto;
+  border-radius: 3px;
+  box-shadow: 2px 2px 30px grey;
+}
+
+.equipList {
+  margin-top: 5%;
+}
+
+/* ALBERT CSS PLAYGROUND */
+.login-box{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+}
+.clock-in-box{
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  text-align: center;
+  align-content: center;
+  margin-top:3vh;
+  margin-bottom: 3vh;
+
+
+  /* margin:0px auto; */
+}
+
+.clock-in-sm-box{
+  /* display: block; */
+}
+
+.log-box{
+    /* display: block; */
+    text-align: left;
+    margin:3vh auto;
+}
+
+.project-box-btn{
+  /* margin:0px auto; */
+  text-align: center;
+}
+
+.control-btn{
+  width:10vw;
+}
+#clock {
+   text-align: center;
+   margin-top: 1vh;
+   font-size: 8vh;
+   font-family: Baskerville, Georgia;
+}
+
+.modal-body{
+  text-align: center;
+}
+
+.loginForm input{
+   border-radius: 5px;
+}
+
+
+.employee-box{
+  margin:3em;
+  border-style: solid;
+  border-width: 1px;
+  padding:1em;
+  text-align: center;
+}
+.logo-text{
+   display:inline-block;
+}
+
+.logo-text-after{
+   display:none;
+}
+/* .navbar.navbar-2 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+} */
+@media only screen and (max-width: 600px) {
+
+    .metroLogo {
+      height: 2em;
+      margin-right:2em;
+      /* font-size: 2vh; */
+    }
+    .logo-text{
+       display:none;
+    }
+
+    .logo-text-after{
+       display:inline-block;
+    }
+
+    .aboutTxt {
+      height: 500px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .metroLogo {
+      height: 1.5em;
+      margin-right:2em;
+      /* font-size: 2vh; */
+    }
+    .logo-text{
+      visibility: hidden;
+    }
+
+    .aboutTxt {
+      height: 100vh;
+    }
+
+    .indexIMG {
+      width: 25vw;
+      height: 25vh;
+    }
+
+    .upcoming {
+      padding-top: 0;
+      margin-top: 0;
+      height: 5%;
+    }
+
+    .row {
+      height: 35vh;
+    }
+
+    .parallax {
+      height: 20vh;
+    }
+    /* .logo-text:after{
+      font-size:2vh;
+      content:'METRO';
+
+    } */
+}

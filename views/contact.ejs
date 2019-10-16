@@ -1,0 +1,18 @@
+<% include ./partials/header %>
+  <% include ./partials/topBanner %>
+<div class="contactPage">
+  <h1>Request More Information</h1>
+  <p>Use this form to contact us to get more information about our company, products, or services.</p>
+  <div class="contactForm" id="contact-form">
+  <form class="contact-form" action="/contactus" method="post" <form onsubmit="return confirm('Your Message Has Been Sent! A Confirmation Email Has Been Sent To You!');">
+    <input type="text" id="contact-input" name="name" placeholder="Name" autofocus="autofocus">
+    <br>
+    <input type="text" id="contact-input" name="email" placeholder="Email">
+    <br>
+    <textarea name="content" id="contact-input" rows="8" cols="80" placeholder="Email Content"></textarea>
+    <br>
+      <button class="btn modalBtn" id="contact-btn"type="submit">SUBMIT</button>
+    </div>
+  </form>
+</div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

@@ -1,0 +1,38 @@
+
+<% include ./partials/header %>
+    <div class="container" id="inbox-container">
+      <div class="btn">
+        <a href="/inbox/unread">Unread</button></a>
+      </div>
+      <div class="btn">
+        <a href="/inbox/achive">Archive</a>
+      </div>
+      <div class="btn">
+        <a href="/inbox/completed">Completed</a>
+      </div>
+    </div>
+    <br><br>
+    <!-- Responsive grid -->
+    <div class="container">
+      <div class="row">
+<% for(var i = 0; i<result.length; i++){ %>
+          <div class="col-4 inbox">
+            <h4><%= result[i].name %></h4>
+            <br>
+            <h6><%= result[i].email %></h6>
+            <p class=""><%= result[i].content %></p>
+            <br>
+            <!-- Buttons -->
+            <form class="index-btn-box" action="/inbox/archive/unread/<%=result[i].id%>" method="post">
+              <button class='inboxBtns' type="submit" name="button">UnRead</button>
+            </form>
+            <form class="index-btn-box" action="/inbox/archive/complete/<%=result[i].id%>" method="post">
+              <button  class="inboxBtns" type="submit" name="button">Completed</button>
+            </form>
+            <form class="index-btn-box" action="/inbox/archive/delete/<%=result[i].id%>" method="get">
+              <button class='inboxBtns' type="submit" name="button">Delete</button>
+            </form>
+          </div>
+          <% } %>
+      </div>
+    </div>

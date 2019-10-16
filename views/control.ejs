@@ -1,0 +1,33 @@
+<% include ./partials/header %>
+  <!-- Add New Project Button -->
+
+
+<div class="container">
+<div class=" controlCont container">
+  <div class="project-box-btn">
+    <a href="/projects/add">
+          <button type="button" class="btn btn-success">
+          <i class="fa fa-plus" aria-hidden="true"></i> New Project</button>
+    </a>
+
+  </div>
+  <div class="row">
+
+    <%result.forEach((item)=>{%>
+      <div class="employee-box col-md-3">
+        <h1><%=item.name%></h1>
+        <hr>
+        <p>Email:<%=item.email%></p>
+        <hr>
+        <p>Put a picture here</p>
+        <a class='btn btn-info'  href="/control/logtime/<%=item.id%>">TimeCard</a>
+
+
+      </div>
+
+      <%})%>
+
+
+  </div>
+
+</div>

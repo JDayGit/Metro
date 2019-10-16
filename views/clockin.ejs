@@ -1,0 +1,163 @@
+
+<% include ./partials/header %>
+<!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Successed Logined in!</strong> Welcome to Metro AZ
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div> -->
+<% include ./partials/topBanner %>
+
+
+
+<div id="clock" >
+
+</div>
+<div class="clock-in-box">
+  <div class="checkin-box">
+    <%if(!(result.length)){%>
+      <form class="" action="clock/in" method="post">
+      <button class='btn btn-success' type="submit" name="button">Clock In</button>
+    </form>
+  <%}else{%>
+    <%if(result[result.length-1].clockin_time){%>
+      <form class="" action="clock/out/<%=result[result.length-1].id%>" method="post">
+        <button  class='btn btn-danger' type="submit" name="button">Clock Out</button>
+      </form>
+    <%}else{%>
+      <form class="" action="clock/in" method="post">
+        <button class='btn btn-success' type="submit" name="button">Clock In</button>
+      </form>
+    <%}%>
+  <%}%>
+
+  </div>
+  <%if((result)==false){%>
+      <%}else{%>
+  <div class="log-box">
+    <table class="table table-hover">
+  <thead class="table-success">
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Clock In </th>
+      <th scope="col">Clock Out</th>
+      <th scope="col">Working Hours</th>
+      <th scope="col">$</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%for(let i=0;i< result.length;i++){%>
+      <%if(result[i].clockin_time){%>
+        <tr>
+          <td><%=result[i].date%></td>
+          <td><%=result[i].clockin_time.slice(0,5)%></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+        </tr>
+
+      <%}else{%>
+        <tr>
+          <td><%=result[i].date%></td>
+          <td></td>
+          <td><%=result[i].clockout_time.slice(0,5)%></td>
+          <td><%=result[i].workingtime%></td>
+          <td>$<%=result[i].workingtime*15%></td>
+        </tr>
+      <%}%>
+    <%}%>
+  </tbody>
+</table>
+<%}%>
+
+
+  </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<script type="text/javascript">
+$('.alert').alert('close')
+
+
+</script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+<script type="text/javascript">
+function clock(){
+//Save the times in variables
+let today = new Date();
+let hours = today.getHours();
+let minutes = today.getMinutes();
+let seconds = today.getSeconds();
+
+
+//Set the AM or PM time
+
+if (hours >= 12){
+  meridiem = " PM";
+}
+else {
+  meridiem = " AM";
+}
+
+
+//convert hours to 12 hour format and put 0 in front
+if (hours>12){
+	hours = hours - 12;
+}
+else if (hours===0){
+	hours = 12;
+}
+//Put 0 in front of single digit minutes and seconds
+
+if (minutes<10){
+	minutes = "0" + minutes;
+}
+else {
+	minutes = minutes;
+}
+
+if (seconds<10){
+	seconds = "0" + seconds;
+}
+else {
+	seconds = seconds;
+}
+
+document.getElementById("clock").innerHTML = (hours + ":" + minutes + ":" + seconds + meridiem);
+}
+
+
+setInterval('clock()', 1000);
+</script>
+
+
+<!-- TO GET LOCATION -->
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
