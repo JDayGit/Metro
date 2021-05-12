@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chart.js": "^2.7.2",
+    "chart.js": "^2.9.4",
     "connect-session-knex": "^1.4.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
