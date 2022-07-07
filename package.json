@@ -18,7 +18,7 @@
     "express-session": "^1.15.6",
     "jquery-parallax.js": "^1.5.0",
     "knex": "^0.19.5",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.21",
     "nodemailer": "^4.6.8",
     "pg": "^7.4.3"
